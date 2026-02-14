@@ -1,6 +1,52 @@
 # 🌌 Atmospheric Entropy Harvester (AEH-1M)
 
 <img width="1536" height="754" alt="trng_analysis_figure" src="https://github.com/user-attachments/assets/d5302422-f920-4edd-a2cb-53f324b9e993" />
+# RESULTS
+TEST 1: SHANNON ENTROPY (Information Density)
+
+   > Theoretical Max: 1.00000000
+
+   > Calculated:      0.99995351
+
+   > Efficiency:      99.995351%
+
+----------------------------------------------------------------
+
+TEST 2: FREQUENCY (MONOBIT) TEST
+
+   > Null Hypothesis (H0): Distribution is uniform.
+
+   > Zero Count:      504,019 (50.4014%)
+
+   > One Count:       495,991 (49.5986%)
+
+   > Delta (Bias):    8,028 bits
+
+   > P-Value:         0.000000
+
+   > Conclusion:      FAIL (Reject H0 - Evidence of Bias)
+
+----------------------------------------------------------------
+
+TEST 3: PEARSON'S CHI-SQUARED TEST
+
+   > Chi^2 Statistic: 64.4481
+
+   > Critical Value:  6.635 (alpha=0.01)
+
+   > Conclusion:      FAIL (Deviates from Uniformity)
+
+----------------------------------------------------------------
+
+TEST 4: SERIAL CORRELATION (Lag-1)
+
+   > Objective: Detect periodic patterns or 50Hz interference.
+
+   > Coefficient:     -0.004134
+
+   > Conclusion:      NEGLIGIBLE (Independent Samples)
+
+===============================================================
 
 > **A Hardware-based True Random Number Generator (TRNG) capturing the stochastic chaos of the local electromagnetic environment.**
 ---
