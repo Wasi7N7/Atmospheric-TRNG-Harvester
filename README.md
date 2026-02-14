@@ -54,7 +54,7 @@ TEST 4: SERIAL CORRELATION (Lag-1)
 ## ⚡ Project Overview
 The **AEH-1M** is a scientific instrument designed to harvest **Electromagnetic Interference (EMI)** and atmospheric noise. By leveraging a high-impedance floating-gate antenna and an LM358 operational amplifier, the system amplifies ambient "noise" to generate a 1-Megabit dataset of true randomness. 
 
-**Mashallah**, the system achieved a Shannon Entropy score of **0.99995351**, making it suitable for cryptographic seeding and high-level stochastic simulations.
+, the system achieved a Shannon Entropy score of **0.99995351**, making it suitable for cryptographic seeding and high-level stochastic simulations.
 
 ---
 
