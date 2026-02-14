@@ -63,3 +63,5 @@ pip install pyserial
 
 # Run the 1-Million Bit Logger
 python software/logger.py
+
+****MADE BY WASI****
