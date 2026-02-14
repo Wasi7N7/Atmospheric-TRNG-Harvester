@@ -1,4 +1,65 @@
-🌌 Atmospheric Entropy Harvester (AEH-1M)A Hardware-Based True Random Number Generator (TRNG) utilizing EMI Fluctuations📋 Project AbstractThe AEH-1M is a stochastic entropy source that harvests ambient electromagnetic interference (EMI) and atmospheric noise. By utilizing a high-impedance floating-gate antenna coupled with an LM358 operational amplifier, the system captures chaotic voltage fluctuations. These fluctuations are processed through a hardware-level Von Neumann De-correlation algorithm to produce a high-density bitstream of 1,000,000+ bits with a Shannon Entropy score of 0.99995.🛠️ Technical SpecificationsHardware ArchitectureMicrocontroller: ATmega328P (Arduino Nano/Uno).Amplification Stage: LM358 Dual Operational Amplifier.Antenna: 10cm Copper Monopole (Floating A0 input).Sampling Rate: Real-time acquisition at 115,200 Baud.Software StackFirmware: C++ (Arduino Framework) utilizing bitwise LSB extraction.Data Acquisition: Python 3.x with pyserial.Statistical Audit: Python-based NIST-standardized frequency and correlation testing.🔬 Theory of OperationThe system operates on the principle of Stochastic Sampling. Unlike Pseudo-Random Number Generators (PRNGs) which rely on deterministic algorithms, the AEH-1M utilizes the unpredictable nature of the local electromagnetic environment.Signal Capture: The floating antenna acts as a transducer, converting atmospheric E-field fluctuations into low-voltage signals.Amplification: The LM358 boosts the signal, bringing the "Quantum Foam" noise into a readable analog range.Digitization: The MCU samples the Least Significant Bit (LSB) of the ADC, where the most entropy resides.Whitening: To eliminate bias caused by DC offset or 50Hz mains hum, a Von Neumann algorithm is applied:01 $\rightarrow$ Output 010 $\rightarrow$ Output 100 or 11 $\rightarrow$ Discard📊 Statistical Verification (The Results)The dataset of 1,000,010 bits was subjected to a rigorous scientific audit.TestMetricResultShannon Entropy0.99995351 bits/bitResearch Grade 🚀Monobit Frequency50.40% (0) / 49.60% (1)Pass (Hardware Verified)Serial Correlation-0.004134Negligible 🌌Bitrate Efficiency99.995%OptimalNote on Bias: The observed 0.4% DC bias is a physical signature of the LM358's input offset voltage, confirming the non-algorithmic, physical origin of the data.📸 Data VisualizationThe following figures illustrate the stochastic independence of the harvested bitstream:Figure 1: (Left) Frequency Histogram, (Center) Pulse-Width Waveform, (Right) 2D Lag-1 Phase Space Map.🚀 Installation & Usage1. Hardware WiringConnect a 10cm wire to Analog Pin A0.(Optional) Use an LM358 in a non-inverting gain configuration for higher sensitivity.2. Upload FirmwareFlash the aeh_firmware.ino to your Arduino using the Arduino IDE.3. Data LoggingInstall dependencies and run the logger:Bashpip install pyserial
-python logger.py
-4. Scientific AuditBashpython scientific_audit.py
-🎓 Academic RecognitionThis project was developed by Wasi as part of a research portfolio for submission to MIT, KAIST, and Sapienza University of Rome. It demonstrates proficiency in hardware-software integration, stochastic physics, and data science.Inshallah, this dataset will contribute to the open-source entropy community.📜 LicenseThis project is licensed under the MIT License. The dataset is available via Zenodo under CC BY 4.0.
+# 🌌 Atmospheric Entropy Harvester (AEH-1M)
+> **A Hardware-based True Random Number Generator (TRNG) capturing the stochastic chaos of the local electromagnetic environment.**
+---
+
+## ⚡ Project Overview
+The **AEH-1M** is a scientific instrument designed to harvest **Electromagnetic Interference (EMI)** and atmospheric noise. By leveraging a high-impedance floating-gate antenna and an LM358 operational amplifier, the system amplifies ambient "noise" to generate a 1-Megabit dataset of true randomness. 
+
+**Mashallah**, the system achieved a Shannon Entropy score of **0.99995351**, making it suitable for cryptographic seeding and high-level stochastic simulations.
+
+---
+
+## 🛠️ The Tech Stack
+* **Hardware:** Arduino Nano (ATmega328P) + LM358 Op-Amp.
+* **Antenna:** 10cm Copper Monopole (A0 Floating Input).
+* **Firmware:** Low-level bitwise LSB extraction.
+* **Data Acquisition:** Asynchronous Python-based UART stream logger.
+* **Analysis:** NIST-standard statistical audit suite.
+
+---
+
+## 🧬 The Science
+The system operates by capturing chaotic voltage fluctuations from the atmosphere. To ensure the output is statistically independent and free from periodic interference (like 50Hz mains hum), a hardware-level **Von Neumann De-correlation** algorithm is applied.
+
+### Mathematical Foundation
+The primary metric for quality is the Shannon Entropy ($H$), calculated as:
+
+$$H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)$$
+
+Our device achieves a calculated efficiency of **99.995%**, validating it as a high-density entropy source.
+
+---
+
+## 📊 Scientific Audit Results
+| Metric | Value | Status |
+| :--- | :--- | :--- |
+| **Total Bits Captured** | 1,000,010 | ✅ Complete |
+| **Shannon Entropy** | 0.99995351 | 🚀 Research Grade |
+| **Serial Correlation** | -0.0041 | 🌌 Independent |
+| **Zero/One Balance** | 50.4% / 49.6% | 🧪 Physical Signature |
+
+> **Note on Bias:** The 0.4% bias is the "hardware fingerprint" of the LM358's input offset voltage. This minor deviation confirms the non-algorithmic, physical origin of the dataset.
+
+---
+
+## 🚀 Usage Guide
+
+### 1. Hardware Construction
+Connect a 10cm copper wire to **Analog Pin A0**. For maximum sensitivity, use an LM358 in a non-inverting gain configuration.
+
+
+
+[Image of a non-inverting operational amplifier circuit diagram]
+
+
+### 2. Deployment
+1.  Upload the firmware to your Arduino.
+2.  **Close the Serial Monitor** (Crucial: Python cannot access the port if the Monitor is open).
+3.  Execute the harvest:
+
+```bash
+# Install required libraries
+pip install pyserial
+
+# Run the 1-Million Bit Logger
+python software/logger.py
