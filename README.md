@@ -100,16 +100,5 @@ Connect a 10cm copper wire to **Analog Pin A0**. For maximum sensitivity, use an
 <img width="1536" height="604" alt="Atmospheric Entropy Harvester" src="https://github.com/user-attachments/assets/16d7a846-ea02-4a89-9d84-cc4636ff498d" />
 
 
-### 2. Deployment
-1.  Upload the firmware to your Arduino.
-2.  **Close the Serial Monitor** (Crucial: Python cannot access the port if the Monitor is open).
-3.  Execute the harvest:
 
-```bash
-# Install required libraries
-pip install pyserial
-
-# Run the 1-Million Bit Logger
-python software/logger.py
-
-****MADE BY WASI****
+******MADE BY WASI******
