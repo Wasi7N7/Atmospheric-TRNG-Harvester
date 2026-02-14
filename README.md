@@ -1,6 +1,6 @@
 # 🌌 Atmospheric Entropy Harvester (AEH-1M)
 
-<img width="1536" height="604" alt="Atmospheric Entropy Harvester" src="https://github.com/user-attachments/assets/bacfdbe7-f4fc-45ce-a2b2-0ae8a4a3b064" />
+<img width="1536" height="754" alt="trng_analysis_figure" src="https://github.com/user-attachments/assets/d5302422-f920-4edd-a2cb-53f324b9e993" />
 
 > **A Hardware-based True Random Number Generator (TRNG) capturing the stochastic chaos of the local electromagnetic environment.**
 ---
@@ -51,8 +51,7 @@ Our device achieves a calculated efficiency of **99.995%**, validating it as a h
 Connect a 10cm copper wire to **Analog Pin A0**. For maximum sensitivity, use an LM358 in a non-inverting gain configuration.
 
 
-
-[Image of a non-inverting operational amplifier circuit diagram]
+<img width="1536" height="604" alt="Atmospheric Entropy Harvester" src="https://github.com/user-attachments/assets/16d7a846-ea02-4a89-9d84-cc4636ff498d" />
 
 
 ### 2. Deployment
