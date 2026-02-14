@@ -1,4 +1,7 @@
 # 🌌 Atmospheric Entropy Harvester (AEH-1M)
+
+<img width="1536" height="604" alt="Atmospheric Entropy Harvester" src="https://github.com/user-attachments/assets/bacfdbe7-f4fc-45ce-a2b2-0ae8a4a3b064" />
+
 > **A Hardware-based True Random Number Generator (TRNG) capturing the stochastic chaos of the local electromagnetic environment.**
 ---
 
